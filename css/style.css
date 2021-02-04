@@ -1,0 +1,1189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: roboto, sans-serif;
+    background-image: url(../img/rsz_beben.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
+
+}
+
+
+.background {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+
+}
+
+.wrapper {
+    max-width: 70vw;
+    margin: 48px auto 0 auto;
+    background-color: rgba(52, 58, 64, 0.95);
+    color: #eee;
+    border: 1px solid #29a6dc;
+    box-shadow: 0 3px 10px #000;
+
+
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    right: 15%;
+    top: 15px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.hamburger.active {
+    right: 2%;
+}
+
+.fa-times {
+    display: none;
+}
+
+.fa-times.active {
+    display: block;
+}
+
+.fa-bars.active {
+    display: none;
+}
+
+
+nav {
+    background: linear-gradient(90deg, rgba(238, 238, 238, 1) 18%, rgba(52, 58, 64, 1) 31%, rgba(52, 58, 64, 1) 85%);
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #29a6dc;
+    box-shadow: 0 3px 10px #000;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+nav ul {
+    width: 50%;
+    margin: 0 16vw 0 auto;
+    list-style: none;
+    max-height: 50px;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav ul li a {
+    display: block;
+    line-height: 50px;
+    padding: 0 2%;
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-right: 1px solid #29a6dc;
+    transition: 0.5s;
+}
+
+li:last-child a {
+    border-right: none;
+
+}
+
+i {
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: -1px;
+}
+
+nav ul li a:hover {
+    color: #29a6dc;
+}
+
+nav img {
+    position: fixed;
+    top: 1px;
+    left: 45px;
+    width: 9vw;
+}
+
+header {
+    position: relative;
+    height: 30vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    border-bottom: 1px solid #29a6dc;
+    overflow: hidden;
+}
+
+
+header div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header div img {
+    width: 100%;
+}
+
+.firstheader {
+    animation: header1 40s linear infinite;
+}
+
+.firstheader img {
+    transform: translateY(-10vh);
+}
+
+
+.secondheader {
+    opacity: 0;
+    animation: header2 40s linear infinite;
+}
+
+.secondheader img {
+    transform: translateY(-25vh);
+}
+
+.thirdheader {
+    opacity: 0;
+    animation: header3 40s linear infinite;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    position: absolute;
+    width: 25vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+
+header p.first {
+    left: 1vw;
+    top: 1vw;
+    opacity: 1;
+    animation: headerp1 40s linear infinite;
+}
+
+header p.second {
+    opacity: 0;
+    bottom: 1%;
+    right: 1%;
+    width: 22vw;
+    animation: headerp2 40s linear infinite;
+}
+
+header p.third {
+    width: 30vw;
+    right: 6vw;
+    bottom: 1vw;
+    opacity: 0;
+    animation: headerp3 40s linear infinite;
+}
+
+@keyframes header1 {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    92% {
+        opacity: 0;
+    }
+}
+
+@keyframes header2 {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    59% {
+        opacity: 1;
+    }
+
+    67% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes header3 {
+    0% {
+        opacity: 0;
+    }
+
+    59% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes headerp1 {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+}
+
+@keyframes headerp2 {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+
+    }
+
+    59% {
+        opacity: 1;
+    }
+
+    67% {
+        opacity: 0;
+    }
+}
+
+@keyframes headerp3 {
+    0% {
+        opacity: 0;
+    }
+
+    59% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+}
+
+div.logo {
+    display: none;
+}
+
+main {
+    min-height: 60vh;
+    padding: 2% 4%;
+    line-height: 170%;
+    text-align: justify;
+    overflow: hidden;
+}
+
+p {
+    padding: 2%;
+}
+
+main>p:first-child {
+    animation: movingtitle 2s ease;
+}
+
+main>p span,
+.galeria span {
+    animation: movingtitlespan 2s linear;
+}
+
+.firma,
+.oferta,
+.galeria a,
+.kontakt {
+    animation: main2 2s linear both;
+}
+
+
+
+@keyframes galerytitles {
+    0% {
+        transform: translateX(120%);
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes movingtitle {
+    0% {
+        transform: translateX(120%);
+    }
+
+
+
+
+    100% {
+        transform: translateX(0);
+    }
+
+
+}
+
+@keyframes movingtitlespan {
+    0% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.firma ul {
+    padding-left: 2%;
+}
+
+main>p:first-child {
+    border-bottom: 1px solid #29a6dc;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 2% 2% 1% 2%;
+    margin-bottom: 1%;
+
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #343A40;
+    border-top: 1px solid #29a6dc;
+    width: 100%;
+    margin: 2% auto 0 auto;
+    box-shadow: 0 3px 10px #000;
+    font-size: 12px;
+}
+
+footer p {
+    text-transform: uppercase;
+    text-align: center;
+    color: #eee;
+    padding: 0.5%;
+}
+
+.firma {
+    line-height: 200%;
+    font-size: 14px;
+}
+
+
+.firma ul {
+    margin-bottom: 2%;
+}
+
+.firma p:last-child {
+    text-align: right;
+    margin: 2% 10% 3% 0;
+
+}
+
+strong {
+    font-weight: normal;
+}
+
+.oferta {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 3% auto 3% auto;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.oferta div {
+    float: left;
+    width: 70%;
+    height: 12vh;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.oferta .picture {
+    width: 30%;
+    height: 20vh;
+    border: 1px solid #29a6dc;
+    border-radius: 5px;
+    border-style: outset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 15px 15px 10px #000;
+}
+
+
+
+
+.listed {
+    background-color: rgba(0, 0, 0, 0.70);
+    display: flex;
+    transform: translateY(4vh);
+}
+
+.oferta div:nth-of-type(3),
+.oferta div:nth-of-type(4),
+.oferta div:nth-of-type(6),
+.oferta div:nth-of-type(8),
+.oferta p:nth-of-type(2),
+.oferta p:nth-of-type(4) {
+    float: right;
+}
+
+
+.oferta p {
+    float: left;
+    width: 70%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.70);
+    padding: 0;
+    height: 12vh;
+    line-height: 12vh;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: translateY(4vh);
+}
+
+.oferta p:nth-of-type(even),
+.oferta div:nth-child(3) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.oferta ul {
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    align-self: center;
+
+}
+
+.oferta ul li {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+
+.oferta div:nth-of-type(2) {
+    background-image: url(../img/konstrukcje.jpg);
+
+}
+
+.oferta div:nth-of-type(4) {
+    background-image: url(../img/wklady.jpg);
+
+}
+
+.oferta div:nth-of-type(5) {
+    background-image: url(../img/szpule.jpg);
+
+}
+
+.oferta div:nth-of-type(6) {
+    background-image: url(../img/ogrodzenia.jpg);
+
+}
+
+.oferta div:nth-of-type(7) {
+    background-image: url(../img/gazy.jpg);
+
+}
+
+.oferta div:nth-of-type(8) {
+    background-image: url(../img/spawanie.jpg);
+
+}
+
+.oferta div:nth-of-type(9) {
+    background-image: url(../img/automatyka.jpg);
+
+
+}
+
+.galeria {
+    margin-bottom: 4%;
+}
+
+.galeria p {
+    width: 120px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 1px solid #29a6dc;
+    text-align: left;
+    margin: 1% 0;
+    padding: 10px 10px 10px 2%;
+    color: #29a6dc;
+    transition-duration: 1s;
+    animation: galerytitles 2s ease;
+    cursor: pointer;
+
+
+}
+
+.galeria p.active {
+    width: 100%;
+}
+
+.bebny div,
+.kominki div {
+    height: 0;
+    overflow: hidden;
+    transition-duration: 2s;
+    transition-delay: 0.8s;
+}
+
+.bebny div.active {
+    height: 330px;
+
+}
+
+.kominki div.active {
+    height: 150px;
+
+}
+
+
+.galeria img {
+    margin: 4px;
+    box-shadow: 0 3px 10px #000;
+    transition: 0.5s;
+    border-radius: 3px;
+    border-style: outset;
+    border: 1px solid #29a6dc;
+}
+
+.galeria img:hover {
+    transform: scale(1.1)
+}
+
+.kontakt {
+    margin-top: 3%;
+}
+
+.data {
+    margin-left: 2%;
+    width: 50vw;
+
+}
+
+.kontakt p {
+    font-size: 16px;
+    padding: 1%;
+    line-height: 150%;
+
+}
+
+.kontakt p:nth-child(5) {
+    margin-top: 3%;
+}
+
+.kontakt p i {
+    font-size: 30px;
+}
+
+iframe {
+
+    width: 50vh;
+    height: 30vh;
+    box-shadow: 5px 3px 10px #000;
+    margin: 3% 0 4% 2%;
+
+
+}
+
+@media (max-width: 1600px) {
+
+
+    .oferta ul li {
+        font-size: 12px;
+    }
+
+    .bebny div.active {
+        height: 450px;
+    }
+
+    .kominki div.active {
+        height: 330px;
+    }
+
+}
+
+@media (max-width: 1400px) {
+    header {
+        height: 25vh;
+    }
+
+    header p.first,
+    header p.second,
+    header p.third {
+        font-size: 20px;
+        width: 30vw;
+    }
+
+    .secondheader img {
+        transform: translateY(-10vh);
+    }
+
+    iframe {
+        width: 30vw;
+    }
+
+    nav img {
+        top: 5px;
+        left: 30px;
+        width: 11vw;
+    }
+}
+
+@media (max-width: 1240px) {
+    nav ul li a {
+        padding: 0 30px;
+    }
+
+    .bebny div.active {
+        height: 520px;
+
+    }
+
+    .oferta p,
+    .oferta ul {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        margin: 0 auto 0 28vw;
+        width: 90%;
+    }
+
+    nav ul li {
+        width: 20%;
+    }
+
+    nav img {
+        width: 13vw;
+        top: 10px;
+        left: 10px;
+    }
+
+    header p.first,
+    header p.second,
+    header p.third {
+        font-size: 18px;
+        width: 35vw;
+    }
+
+    .oferta div {
+        height: 30vh;
+    }
+
+    .oferta .listed {
+        height: 12vh;
+    }
+
+    .oferta div ul {
+        font-size: 1.5vw;
+        line-height: 140%;
+    }
+
+    .oferta div p {
+        font-size: 1.8vw;
+        line-height: 30vh;
+    }
+
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+    .wrapper {
+        margin-top: 0;
+        transition: 1s;
+    }
+
+    .wrapper.active {
+        margin-top: 12vh;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active {
+        transform: translateY(8vh);
+    }
+
+    nav {
+        transform: translateY(-15vh);
+        transition: 1s;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    nav ul li a {
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 12vh;
+
+    }
+
+    nav img {
+        width: 15vw;
+    }
+
+    nav ul li a i {
+        margin-right: 10px;
+    }
+
+    header p.first,
+    header p.second,
+    header p.third {
+        font-size: 12px;
+        width: 30vw;
+    }
+
+
+    main>p:first-child {
+        font-size: 14px;
+    }
+
+    .firma p,
+    ul {
+        font-size: 12px;
+        line-height: 160%;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .oferta p {
+        font-size: 12px;
+    }
+
+    .oferta ul li {
+        font-size: 10px;
+        line-height: 130%;
+    }
+
+    .galeria img {
+        margin: 2px;
+
+    }
+
+    .galeria p {
+        width: 70px;
+        padding-bottom: 1%;
+    }
+
+    .bebny div.active {
+        height: 700px;
+
+    }
+
+    .kominki div.active {
+        height: 420px;
+
+    }
+
+    .bebny p,
+    .kominki p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .wrapper {
+        max-width: 100vw;
+        min-height: 100vh;
+
+    }
+
+    header {
+        height: 20vh;
+    }
+
+    header p.first {
+        left: 1vw;
+        top: 18vw;
+        opacity: 1;
+        animation: headerp1 40s linear infinite;
+    }
+
+
+    nav {
+        max-height: 60px;
+    }
+
+    nav ul {
+        max-height: 60px;
+    }
+
+    nav ul li a {
+        line-height: 60px;
+        font-size: 18px;
+    }
+
+    nav ul li a i {
+        font-size: 0;
+        margin: 0;
+    }
+
+    nav img {
+        width: 15vw;
+    }
+
+    header {
+        max-width: 100vw;
+
+    }
+
+    .oferta .listed ul {
+        font-size: 18px;
+    }
+
+    iframe {
+
+        width: 40vh;
+
+    }
+
+    .bebny div.active {
+        height: 420px;
+    }
+}
+
+
+
+
+
+@media (max-width: 890px) and (orientation: portrait) {
+    .wrapper {
+        margin-top: 60px;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    nav {
+        max-height: 10vh;
+        margin: 0 auto;
+        padding: 0;
+        background: linear-gradient(90deg, rgba(52, 58, 64, 1) 18%, rgba(52, 58, 64, 1) 31%, rgba(52, 58, 64, 1) 85%);
+    }
+
+    nav img {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        max-height: 60px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 25%;
+    }
+
+    nav ul li a {
+        line-height: 60px;
+        font-size: 2vh;
+        padding: 0 2vw;
+        width: 25vw;
+        padding: 0 1.5vw;
+        text-align: center;
+
+    }
+
+    header {
+        max-width: 100vw;
+
+    }
+
+    div.logo {
+        display: block;
+        width: 100%;
+        height: 47px;
+        border-bottom: 1px solid #29a6dc;
+        padding: 0;
+        text-align: right;
+        background: linear-gradient(90deg, rgba(52, 58, 64, 1) 29%, rgba(52, 58, 64, 1) 46%, rgba(238, 238, 238, 1) 68%);
+    }
+
+    div.logo img {
+        display: inline-block;
+        height: 100%;
+        padding-right: 3vw;
+    }
+
+    .oferta div {
+        height: 20vh;
+    }
+
+    .oferta div p {
+        line-height: 20vh;
+        font-size: 20px;
+    }
+
+    .oferta div ul {
+        font-size: 16px;
+    }
+
+    .bebny div.active {
+        height: 450px;
+    }
+}
+
+@media (max-width: 414px) and (orientation: portrait) {
+    header {
+        max-width: 100vw;
+
+    }
+
+    header p.first,
+    header p.second,
+    header p.third {
+        font-size: 12px;
+        width: 60vw;
+    }
+
+    header div img {
+        width: 120%;
+    }
+
+    header p.first {
+        left: 1vw;
+        top: 25vw;
+        opacity: 1;
+        animation: headerp1 40s linear infinite;
+    }
+
+    div.logo {
+        height: 35px;
+        background: linear-gradient(90deg, rgba(52, 58, 64, 1) 19%, rgba(52, 58, 64, 1) 28%, rgba(238, 238, 238, 1) 53%);
+    }
+
+    .wrapper {
+        margin-top: 0;
+        transition: 1s;
+    }
+
+    .wrapper.active {
+        margin-top: 60px;
+    }
+
+    .hamburger {
+        display: block;
+        right: 1%;
+    }
+
+    .hamburger.active {
+        transform: translateY(5vh);
+    }
+
+    nav {
+        transform: translateY(-15vh);
+        transition: 1s;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    .firma,
+    .oferta,
+    .galeria {
+        padding: 3%;
+    }
+
+    main>p:first-child {
+        font-size: 14px;
+        padding: 4% 4% 2% 4%;
+    }
+
+    .oferta div {
+        margin-bottom: 3%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .oferta .picture {
+        height: 12vh;
+        width: 35%;
+    }
+
+    .oferta p {
+        transform: translateY(2vh);
+        width: 65%;
+        font-size: 12px;
+        height: 8vh;
+        line-height: 8vh;
+    }
+
+    .oferta .listed {
+        transform: translateY(2vh);
+        width: 65%;
+        height: 8vh;
+    }
+
+    .oferta .listed ul {
+        font-size: 12px;
+    }
+
+    .listed ul li {
+        font-size: 10px;
+        line-height: 130%;
+    }
+
+
+
+    .oferta div:nth-child(6) {
+        margin-bottom: 4%;
+
+    }
+
+    .firma p,
+    ul {
+        font-size: 12px;
+        line-height: 160%;
+    }
+
+    .oferta div ul {
+        font-size: 12px;
+    }
+
+    .data {
+        width: 70vw;
+    }
+
+    .kontakt p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .galeria {
+        max-width: 350px;
+    }
+
+    .galeria img {
+        margin: 6px 4px;
+    }
+
+    .galeria p {
+        width: 90px;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .bebny div.active {
+        height: 1100px;
+
+    }
+
+    .kominki div.active {
+        height: 450px;
+
+
+    }
+}
